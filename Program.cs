@@ -1,4 +1,6 @@
-﻿namespace ClinicSystem
+﻿using System.ComponentModel.Design;
+
+namespace ClinicSystem
 {
     internal class Program
     {
@@ -162,9 +164,64 @@
 
                             break;
 
+
+                                   // DISPLAY ALL Patients
+
+
                                 case 2:
+
+                                    int displayNum = 1;
+
                                     Console.WriteLine("2)Display All Patients");
+
+                                    if (patientCount == 0)
+                                    {
+                                        Console.WriteLine("No patients registered");
+                                    }
+
+                                    else
+                                    {
+                                        if (p1Active = true) ;
+                                    {
+
+
+                                        Console.WriteLine("Patient #1" + displayNum);
+                                        Console.WriteLine("name" + p1Name);
+                                        Console.WriteLine("age" + p1Age);
+                                        Console.WriteLine("phone" + p1Phone);
+
+                                            displayNum++;
+
+                                    }
+
+                                        if (p2Active = true) ;
+
+                                        {
+
+
+                                            Console.WriteLine("Patient #2" + displayNum);
+                                            Console.WriteLine("name" + p2Name);
+                                            Console.WriteLine("name" + p2Age);
+                                            Console.WriteLine("name" + p2Phone);
+
+                                            displayNum++;
+                                        }
+
+                                        if (p3Active = true) ;
+                                        {
+                                            Console.WriteLine("Patient #3" + displayNum);
+                                            Console.WriteLine("name" + p3Name);
+                                            Console.WriteLine("name" + p3Age);
+                                            Console.WriteLine("name" + p3Phone);
+
+                                            displayNum++;
+                                        }
+
+                                    }//else
+
                                     break;
+
+
 
                                 case 3:
                                     Console.WriteLine("3)Update Patient Phone");
