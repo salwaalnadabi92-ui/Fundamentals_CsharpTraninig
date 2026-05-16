@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.Design;
+using System.Xml.Linq;
 
 namespace ClinicSystem
 {
@@ -196,9 +197,6 @@ namespace ClinicSystem
 
                                         if (p2Active = true) ;
 
-                                        {
-
-
                                             Console.WriteLine("Patient #2" + displayNum);
                                             Console.WriteLine("name" + p2Name);
                                             Console.WriteLine("age" + p2Age);
@@ -226,13 +224,44 @@ namespace ClinicSystem
                                 case 3:
                                     Console.WriteLine("3)Update Patient Phone");
 
+                                    // UPDATE Patient Phone
+                                    Console.WriteLine("enter patient name");
+                                    string name = Console.ReadLine();
 
+                                if (p1Active && p1Name == name)
+                                {
+                                    Console.WriteLine("enter new phone");
+                                    string Newphone = Console.ReadLine();
+                                    p1Phone = Newphone;
 
+                                    Console.WriteLine("Updated");
 
+                                }
 
+                                else if (p2Active && p2Name == name) 
+                                {
+                                    Console.WriteLine("enter new phone");
+                                    string Newphone = Console.ReadLine();
+                                    p2Phone = Newphone;
 
+                                    Console.WriteLine("Updated");
+                                }
 
-                                    break;
+                                else if (p3Active && p3Name == name)
+                                {
+                                    Console.WriteLine("enter new phone");
+                                    string Newphone = Console.ReadLine();
+                                    p3Phone = Newphone;
+
+                                    Console.WriteLine("Updated");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("patient not found");
+
+                                }
+
+                                break;
 
                                 case 4:
                                     Console.WriteLine("4)Delete Patient");
