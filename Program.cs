@@ -103,11 +103,64 @@
 
                             {
 
+                                //ADD Patient
 
                                 case 1:
 
                                     Console.WriteLine("1)Add New Patient");
-                                    break;
+
+             
+                                    if (patientCount == MAX_PATIENTS)
+                                    {
+                                        Console.WriteLine(" clinic is full");
+                                    }
+
+                                    Console.WriteLine(" enter your name ");
+
+                                    string Name = Console.ReadLine();
+                                    if (Name == null)
+                                    {
+                                        Console.WriteLine(" invalid name ");
+                                    }
+
+                                    Console.WriteLine(" enter your age ");
+
+                                    int age =Convert.ToInt32 (Console.ReadLine());
+                                    if (p1Age <1 || p1Age >120)
+                                    {
+
+                                        Console.WriteLine(" invalid age ");
+                                    }
+                                    Console.WriteLine(" enter your phone");
+                                    string phone = Console.ReadLine();
+
+                                    if(!p1Active)
+                                    {
+                                        p1Name = Name;
+                                        p1Age = age;
+                                        p1Phone = phone;
+                                        p1Active = true;
+                                             }
+                                    else if (!p2Active)
+                                    {
+                                        p2Name = Name;
+                                        p2Age = age;
+                                        p2Phone = phone;
+                                        p2Active = true;
+                                    }
+
+                                    else if (!p3Active)
+                                    {
+                                        p3Name = Name;
+                                        p3Age = age;
+                                        p3Phone = phone;
+                                        p3Active = true;
+                                    }
+                                    patientCount++;
+                                    Console.WriteLine(" Patient added successfully ");
+   
+
+                            break;
 
                                 case 2:
                                     Console.WriteLine("2)Display All Patients");
