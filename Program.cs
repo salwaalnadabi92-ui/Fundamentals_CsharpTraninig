@@ -216,8 +216,8 @@ namespace ClinicSystem
                                         }
 
                                     }//else
-
                         
+
                         break;
 
                         
@@ -366,10 +366,82 @@ namespace ClinicSystem
 
                                 case 1:
                                     Console.WriteLine("1)Add New Doctor ");
+
+                                    if (doctorCount == MAX_DOCTORS) ;
+                                    {
+                                        Console.WriteLine("No available doctor slots");
+
+                                    }
+
+                                    Console.WriteLine("enter your name");
+                                    string name = Console.ReadLine();
+
+                                   Console.WriteLine("enter your apecialization");
+                                    string spec = Console.ReadLine();
+
+                                    Console.WriteLine("enter your fee");
+                                    double fee = Convert.ToDouble(Console.ReadLine());
+
+
+                                    if (fee < 0)
+                                    {
+                                        Console.WriteLine("error");
+                                    }
+
+                                    else
+                                    {
+
+                                        if (!d1Active)
+                                        {
+                                            d1Name = name;
+                                        d1Spec = spec;
+                                        d1Fee = fee;
+                                        d1Active= true;
+  
+                                     
+                                    }
+
+
+                                        else if (!d2Active)
+                                            {
+                                            d2Name = name;
+                                            d2Spec = spec;
+                                            d2Fee = fee;
+                                            d2Active = true;
+                                        }
+
+                                        doctorCount++;
+                                             Console.WriteLine("Doctor added successfully");
+                                    }
+
                                     break;
 
                                 case 2:
                                     Console.WriteLine("2)Display All Doctors");
+
+                                    if(doctorCount == 0)
+                                    {
+                                        Console.WriteLine("No doctors registered");
+                                    }
+
+                                    if (d1Active)
+
+                                    {
+                                        Console.WriteLine("d1Name");
+                                        Console.WriteLine("d1Spec");
+                                        Console.WriteLine("d1Fee");
+                                    }
+
+
+
+                                    if (d2Active)
+
+                                    {
+                                        Console.WriteLine("d2Name");
+                                        Console.WriteLine("d2Spec");
+                                        Console.WriteLine("d2Fee");
+                                    }
+
                                     break;
 
                                 case 3:
