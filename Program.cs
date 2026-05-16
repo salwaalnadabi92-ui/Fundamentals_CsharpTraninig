@@ -446,10 +446,61 @@ namespace ClinicSystem
 
                                 case 3:
                                     Console.WriteLine("3)Update Consultation Fee");
-                                    break;
+
+                                    Console.WriteLine("write your name ");
+                                    string Name = Console.ReadLine();
+                                    if (d1Active && d1Name == Name)
+                                    {
+
+                                        Console.WriteLine("ENTER YOUR FEE");
+                                    double fee= Convert.ToDouble(Console.ReadLine());
+                                    if (fee < 0)
+                                    {
+                                        Console.WriteLine("invaild");
+                                    }
+                                    else
+
+                                        {
+                                            d1Fee = fee;
+                                            Console.WriteLine("fee update");
+
+                                        }
+
+
+                                        else if(d2Active && d2Name == Name)
+                                        {
+
+                                            Console.WriteLine("ENTER YOUR FEE");
+                                            double fee = Convert.ToDouble(Console.ReadLine());
+                                            if (fee<0)
+                                            {
+                                                Console.WriteLine("invaild");
+                                            }
+                                            else
+
+                                            {
+                                                d2Fee = fee;
+                                                Console.WriteLine("fee update");
+
+                                            }
+                                        }
+
+                                        else
+                                            {
+                                                Console.WriteLine("doctor not found");
+
+                                            }
+
+                                            break;
 
                                 case 4:
                                     Console.WriteLine("4)Delete Doctor");
+
+
+
+
+
+
                                     break;
                                 case 0:
                                     Console.WriteLine("0. Back to Main Menu");
