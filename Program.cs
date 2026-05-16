@@ -496,12 +496,71 @@ namespace ClinicSystem
                                 case 4:
                                     Console.WriteLine("4)Delete Doctor");
 
+                                            Console.WriteLine("enter doctor name ");
+                                            string Name = Console.ReadLine();
+
+                                            if (d1Active && d1Name == name)
+
+                                            {
+                                                d1Active = false;
+                                                d1Name = "";
+                                                d1Spec = "";
+                                                d1Fee = 0;
+
+                                                doctorCount--;
+
+                                                Console.WriteLine("Doctor removed");
+                                            }
+                                            else if (d2Active && d2Name == name)
+
+                                            {
+
+                                                d2Active = false;
+                                                d2Name = "";
+                                                d2Spec = "";
+                                                d2Fee = 0;
+
+                                                doctorCount--;
+                                                Console.WriteLine("Doctor removed");
+
+
+                                            }
+
+                                            else
+                                            {
+
+                                                Console.WriteLine("Doctor not found");
+
+                                            }
 
 
 
 
 
-                                    break;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            break;
                                 case 0:
                                     Console.WriteLine("0. Back to Main Menu");
                                     break;
