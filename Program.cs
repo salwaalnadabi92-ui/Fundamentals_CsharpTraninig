@@ -217,11 +217,12 @@ namespace ClinicSystem
 
                                     }//else
 
-                                    break;
+                        
+                        break;
 
+                        
 
-
-                                case 3:
+                    case 3:
                                     Console.WriteLine("3)Update Patient Phone");
 
                                     // UPDATE Patient Phone
@@ -229,6 +230,7 @@ namespace ClinicSystem
                                     string name = Console.ReadLine();
 
                                 if (p1Active && p1Name == name)
+
                                 {
                                     Console.WriteLine("enter new phone");
                                     string Newphone = Console.ReadLine();
@@ -237,6 +239,8 @@ namespace ClinicSystem
                                     Console.WriteLine("Updated");
 
                                 }
+
+
 
                                 else if (p2Active && p2Name == name) 
                                 {
@@ -264,8 +268,61 @@ namespace ClinicSystem
                                 break;
 
                                 case 4:
+
+                              //DELETE Patient
+
+
                                     Console.WriteLine("4)Delete Patient");
-                                    break;
+
+                                Console.WriteLine("enter patient name");
+                                string Name = Console.ReadLine();
+
+                                if (p1Active && p1Name == name)
+
+                                {
+                                    p1Active = false;
+                                    p1Name = "";
+                                     p1Age = 0;
+                                    p1Phone = "";
+
+                                    patientCount--;
+
+                                }
+                                else if (p2Active && p2Name == name) 
+
+                                {
+
+                                    p2Active = false;
+                                    p2Name = "";
+                                     p2Age = 0;
+                                    p2Phone = "";
+
+                                    patientCount--;
+                                }
+
+                                  else if (p3Active && p3Name == name) 
+
+                                {
+
+                                    p3Active = false;
+                                    p3Name = "";
+                                     p3Age = 0;
+                                    p3Phone = "";
+
+                                    patientCount--;
+                                }
+
+                                 else
+
+                                {
+                                    Console.WriteLine("Patient not found");
+
+
+                                }
+
+
+
+                                break;
 
                                 case 0:
 
@@ -280,6 +337,7 @@ namespace ClinicSystem
                             }//swtich
 
                         } //while
+
                         break;//paitent sub menu
 
 
