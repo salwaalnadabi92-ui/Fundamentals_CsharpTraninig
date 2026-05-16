@@ -57,8 +57,211 @@
             string a3Date = "";
             string a3Status = "";
             bool a3Active = false;
-
             int appointmentCount = 0;
+
+
+
+
+            //main menu
+
+            while (true) ;
+
+            {
+                Console.Clear();
+                Console.WriteLine("CLINIC MANAGEMENT SYSTEM");
+                Console.WriteLine("1)Patient Management");
+                Console.WriteLine("2)Doctor Management");
+                Console.WriteLine("3) Appointment Management");
+                Console.WriteLine("0) Exit");
+
+                Console.WriteLine("Enter Your Choice:  ");
+
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+
+                switch (choice)
+                {
+
+                    //Patient Management Sub - Menu
+                    case 1:
+                        while (true)
+
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Patient Management");
+                            Console.WriteLine("1)Add New Patient");
+                            Console.WriteLine("2)Display All Patients");
+                            Console.WriteLine("3)Update Patient Phone");
+                            Console.WriteLine("4)Delete Patient");
+                            Console.WriteLine("0)Back to Main Menu ");
+
+                            Console.WriteLine("Enter Your  choice:  ");
+
+                            int patient_choice = Convert.ToInt32(Console.ReadLine());
+
+                            switch (patient_choice)
+
+                            {
+
+
+                                case 1:
+
+                                    Console.WriteLine("1)Add New Patient");
+                                    break;
+
+                                case 2:
+                                    Console.WriteLine("2)Display All Patients");
+                                    break;
+
+                                case 3:
+                                    Console.WriteLine("3)Update Patient Phone");
+
+                                    break;
+
+                                case 4:
+                                    Console.WriteLine("4)Delete Patient");
+                                    break;
+
+                                case 0:
+
+                                    Console.WriteLine("0)Back to Main Menu ");
+                                    break;
+
+                                default:
+
+                                    Console.WriteLine(" do NOT exit the program");
+
+                                    break;
+                            }//swtich
+
+                        } //while
+                        break;//paitent sub menu
+
+
+                    // Doctor Management Sub - Menu
+
+                    case 2:
+                        while (true)
+
+                        {
+
+                            Console.Clear();
+                            Console.WriteLine("Doctor Management");
+                            Console.WriteLine("1)Add New Doctor ");
+                            Console.WriteLine("2)Display All Doctors");
+                            Console.WriteLine("3)Update Consultation Fee");
+                            Console.WriteLine("4)Delete Doctor");
+                            Console.WriteLine("0. Back to Main Menu");
+
+                            Console.WriteLine("Enter Your  choice:  ");
+
+                            int doctor_choice = Convert.ToInt32(Console.ReadLine());
+
+                            switch (doctor_choice)
+                            {
+
+
+                                case 1:
+                                    Console.WriteLine("1)Add New Doctor ");
+                                    break;
+
+                                case 2:
+                                    Console.WriteLine("2)Display All Doctors");
+                                    break;
+
+                                case 3:
+                                    Console.WriteLine("3)Update Consultation Fee");
+                                    break;
+
+                                case 4:
+                                    Console.WriteLine("4)Delete Doctor");
+                                    break;
+                                case 0:
+                                    Console.WriteLine("0. Back to Main Menu");
+                                    break;
+                                default:
+                                    Console.WriteLine(" do NOT exit the program");
+                                    break;
+
+                            }//switch
+
+                        }//while
+                        break;//doctor sub menu
+
+
+
+                    // Appointment Management Sub - Menu
+
+                    case 3:
+                        while (true)
+
+                        {
+                            Console.Clear();
+                            Console.WriteLine("1)Book New Appointment");
+                            Console.WriteLine("2)Display All Appointments");
+                            Console.WriteLine("3)Update Appointment Status");
+                            Console.WriteLine("4)Cancel Appointment");
+                            Console.WriteLine("0)Back to Main Menu");
+
+                            Console.WriteLine("Enter Your  choice:  ");
+
+                            int APPOINTMENT_choice = Convert.ToInt32(Console.ReadLine());
+
+                            switch (APPOINTMENT_choice)
+                            {
+
+                                case 1:
+                                    Console.WriteLine("1)Book New Appointment");
+                                    break;
+
+                                case 2:
+                                    Console.WriteLine("2)Display All Appointments");
+                                    break;
+
+                                case 3:
+                                    Console.WriteLine("3)Update Appointment Status");
+                                    break;
+
+                                case 4:
+                                    Console.WriteLine("4)Cancel Appointment");
+                                    break;
+
+                                case 0:
+                                    Console.WriteLine("0)Back to Main Menu");
+
+                                    break;
+
+                                default:
+                                    Console.WriteLine(" do NOT exit the program");
+
+                                    break;
+
+                            }//switch
+                        }//while
+
+                        break;// APPOINTMENT sub menu
+
+
+                    case 0:
+
+                        Console.WriteLine("0) Exit");
+
+                        break;
+
+                    default:
+
+                        Console.WriteLine(" do NOT exit the program");
+
+                        break;
+
+                }//main switch
+
+            }//main while
+
+
+
+
+
 
 
 
