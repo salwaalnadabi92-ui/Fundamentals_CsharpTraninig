@@ -201,8 +201,8 @@ namespace ClinicSystem
 
                                             Console.WriteLine("Patient #2" + displayNum);
                                             Console.WriteLine("name" + p2Name);
-                                            Console.WriteLine("name" + p2Age);
-                                            Console.WriteLine("name" + p2Phone);
+                                            Console.WriteLine("age" + p2Age);
+                                            Console.WriteLine("phone" + p2Phone);
 
                                             displayNum++;
                                         }
@@ -211,8 +211,8 @@ namespace ClinicSystem
                                         {
                                             Console.WriteLine("Patient #3" + displayNum);
                                             Console.WriteLine("name" + p3Name);
-                                            Console.WriteLine("name" + p3Age);
-                                            Console.WriteLine("name" + p3Phone);
+                                            Console.WriteLine("age " + p3Age);
+                                            Console.WriteLine("phone" + p3Phone);
 
                                             displayNum++;
                                         }
@@ -225,6 +225,12 @@ namespace ClinicSystem
 
                                 case 3:
                                     Console.WriteLine("3)Update Patient Phone");
+
+
+
+
+
+
 
                                     break;
 
