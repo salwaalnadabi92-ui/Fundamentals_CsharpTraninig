@@ -533,33 +533,6 @@ namespace ClinicSystem
 
                                             }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                             break;
                                 case 0:
                                     Console.WriteLine("0. Back to Main Menu");
@@ -597,7 +570,168 @@ namespace ClinicSystem
 
                                 case 1:
                                     Console.WriteLine("1)Book New Appointment");
-                                    break;
+
+                                                if (appointmentCount == MAX_APPOINTMENTS)
+                                                {
+                                                    Console.WriteLine("No available appointment slots");
+
+                                                }
+
+                                                if (patientCount == 0 || doctorCount == 0)
+                                                {
+                                                    Console.WriteLine("Please add patients and doctors first");
+
+                                                }
+                                                else
+
+                                                {
+
+                                                    Console.WriteLine("1 - " + p1Name);
+
+                                                    Console.Write("Choose patient: ");
+                                                    int patientChoice = Convert.ToInt32(Console.ReadLine());
+
+                                                    string chosenPatient = "";
+
+                                                    if (patientChoice == 1)
+
+                                                    {
+
+                                                        chosenPatient = p1Name;
+
+                                                    }
+
+
+                                                    Console.WriteLine("1 - " + d1Name);
+
+                                                    Console.Write("Choose doctor: ");
+                                                    int doctorChoice = Convert.ToInt32(Console.ReadLine());
+                                                    string chosenDoctor = "";
+
+                                                    if (doctorChoice == 1)
+
+                                                    {
+
+                                                        chosenDoctor = d1Name;
+
+
+                                                    }
+
+
+
+                                                    Console.Write("Enter date: ");
+
+                                                    string date = Console.ReadLine();
+
+
+
+                                                    if (a1Active &&
+
+
+
+                                                        a1Patient == chosenPatient &&
+
+
+
+                                                        a1Doctor == chosenDoctor &&
+
+
+
+                                                        a1Date == date)
+
+
+
+                                                    {
+
+
+
+                                                        Console.WriteLine("Duplicate appointment");
+
+
+
+                                                    }
+
+
+
+                                                    else
+
+
+
+                                                    {
+
+
+
+                                                        a1Patient = chosenPatient;
+
+
+
+                                                        a1Doctor = chosenDoctor;
+
+
+
+                                                        a1Date = date;
+
+
+
+                                                        a1Status = "Scheduled";
+
+
+
+                                                        a1Active = true;
+
+
+
+                                                        appointmentCount++;
+
+
+
+                                                        Console.WriteLine("Appointment booked");
+
+
+
+                                                    }
+
+
+
+                                                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                break;
 
                                 case 2:
                                     Console.WriteLine("2)Display All Appointments");
